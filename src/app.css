@@ -3,10 +3,76 @@
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
 
+@theme {
+	--font-sans: 'Outfit', 'Noto Sans JP', sans-serif;
+	--color-gold-50: #fffbeb;
+	--color-gold-100: #fef3c7;
+	--color-gold-200: #fde68a;
+	--color-gold-300: #fcd34d;
+	--color-gold-400: #fbbf24;
+	--color-gold-500: #f59e0b;
+	--color-gold-600: #d97706;
+	--color-gold-700: #b45309;
+	--color-gold-800: #92400e;
+	--color-gold-900: #78350f;
+}
+
 body {
-	background: linear-gradient(135deg, #fefef0 0%, #fef3c7 50%, #fde047 100%);
+	background: radial-gradient(circle at 50% 0%, #fffbeb 0%, #fef3c7 60%, #fde68a 100%);
 	background-attachment: fixed;
 	min-height: 100vh;
-	color: #1e293b; /* slate-800 for readable text on yellow background */
+	font-family: var(--font-sans);
+	color: #1e293b;
+	scroll-behavior: smooth;
 }
+
+/* Custom animations & utilities */
+@keyframes float {
+	0%, 100% { transform: translateY(0px); }
+	50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+	animation: float 6s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+	0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.4); }
+	50% { transform: scale(1.02); box-shadow: 0 0 20px 10px rgba(245, 158, 11, 0.15); }
+}
+
+.animate-pulse-glow {
+	animation: pulse-glow 3s infinite ease-in-out;
+}
+
+/* Glassmorphism cards */
+.glass-card {
+	background: rgba(255, 255, 255, 0.65);
+	backdrop-filter: blur(12px);
+	border: 1px solid rgba(255, 255, 255, 0.4);
+	box-shadow: 0 8px 32px 0 rgba(146, 64, 14, 0.05);
+}
+
+.glass-card-dark {
+	background: rgba(30, 41, 59, 0.85);
+	backdrop-filter: blur(12px);
+	border: 1px solid rgba(255, 255, 255, 0.08);
+	box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+	width: 8px;
+}
+::-webkit-scrollbar-track {
+	background: rgba(254, 243, 199, 0.5);
+}
+::-webkit-scrollbar-thumb {
+	background: rgba(245, 158, 11, 0.5);
+	border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+	background: rgba(217, 119, 6, 0.7);
+}
+
 
