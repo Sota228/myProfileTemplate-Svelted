@@ -303,7 +303,7 @@
 									<li>礼儀正しく、まずは挨拶から</li>
 									<li>疲れた仲間には適切な休息を</li>
 									<li>どんな困難にもいいよ、来いよの精神で</li>
-								</</ol>
+								</ol>
 							</div>
 						</div>
 						<div class="mt-6 pt-4 border-t border-amber-100 text-xs text-slate-600 font-semibold italic text-center">
