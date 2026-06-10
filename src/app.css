@@ -2,3 +2,11 @@
 
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
+
+body {
+	background: linear-gradient(135deg, #fefef0 0%, #fef3c7 50%, #fde047 100%);
+	background-attachment: fixed;
+	min-height: 100vh;
+	color: #1e293b; /* slate-800 for readable text on yellow background */
+}
+
